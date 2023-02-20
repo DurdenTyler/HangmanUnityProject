@@ -9,7 +9,9 @@ namespace DefaultNamespace
 {
     public class HangManGame : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI _textField;
+        [SerializeField] private TextMeshProUGUI _textFieldGuessedWord;
+        
+        [SerializeField] private TextMeshProUGUI _textFieldHP;
         
         [SerializeField] private int hp = 7;
         
@@ -61,6 +63,7 @@ namespace DefaultNamespace
             {
                 wrongTriedLetters.Add(pressedKey);
                 hp -= 1;
+                _textFieldHP.text = $"Your life: {hp.ToString()}";
 
                 if (hp <= 0)
                 {
@@ -94,12 +97,12 @@ namespace DefaultNamespace
             if (wordUppercase == stringToPrint)
             {
                 print($"Congratulations, you won^) the guess word is {wordUppercase}");
-                _textField.text = wordUppercase;
+                _textFieldGuessedWord.text = wordUppercase;
             }
             else
             {
                 print(stringToPrint);
-                _textField.text = stringToPrint;
+                _textFieldGuessedWord.text = stringToPrint;
             }
         }
     }

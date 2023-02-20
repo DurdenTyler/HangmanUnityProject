@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HangManMenu.unity
+    guid: 0534fce9fec1c466d81debb61a409121
+  - enabled: 1
+    path: Assets/Scenes/HangManGamePlay.unity
+    guid: 9c493416ed3d54ed090a7d593abbca28
+  - enabled: 1
+    path: Assets/Scenes/YouWon.unity
+    guid: 9f84fc347385e4fdda16a72d79006fc4
   m_configObjects: {}
