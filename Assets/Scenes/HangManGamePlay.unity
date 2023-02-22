@@ -1401,9 +1401,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wordToGuessText: {fileID: 1284877856}
-  _textFieldHP: {fileID: 1115129110}
-  _textFieldWrongLetters: {fileID: 1456385847}
-  _textFieldClues: {fileID: 1705715405}
+  _hpText: {fileID: 1115129110}
+  _wrongLettersText: {fileID: 1456385847}
+  _cluesText: {fileID: 1705715405}
   hp: 7
 --- !u!1 &2074549720
 GameObject:

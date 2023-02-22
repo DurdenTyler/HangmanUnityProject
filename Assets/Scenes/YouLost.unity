@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 451687629}
   - component: {fileID: 451687628}
   m_Layer: 5
-  m_Name: Text
+  m_Name: UnfortunatellyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -900,7 +900,7 @@ GameObject:
   - component: {fileID: 1452846919}
   - component: {fileID: 1452846918}
   m_Layer: 5
-  m_Name: Button
+  m_Name: RepeatAgainButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89612ade19a24dc8b9dd603a544a1d5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: HangManGamePlay
+  _sceneName: HangManGamePlay
 --- !u!114 &1452846919
 MonoBehaviour:
   m_ObjectHideFlags: 0

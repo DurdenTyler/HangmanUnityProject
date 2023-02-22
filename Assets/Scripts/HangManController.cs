@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace DefaultNamespace
@@ -12,7 +13,7 @@ namespace DefaultNamespace
 
         [SerializeField] private TextMeshProUGUI _hpText;
 
-        [SerializeField] private TextMeshProUGUI _wrongLetersText;
+        [SerializeField] private TextMeshProUGUI _wrongLettersText;
 
         [SerializeField] private TextMeshProUGUI _cluesText;
 
@@ -67,7 +68,6 @@ namespace DefaultNamespace
 
         private void ProcessKey(KeyCode key)
         {
-            _wrongLetersText.text = string.Join(", ", _wrongTriedLetters);
             _hpText.text = $"Your life: {hp.ToString()}";
             var wordUppercase = _wordToGuess.ToUpper();
             char pressedKey = key.ToString()[0];
@@ -86,6 +86,7 @@ namespace DefaultNamespace
                 else
                 {
                     print($"This letter isn't in word, hp left {hp}");
+                    _wrongLettersText.text = string.Join(", ", _wrongTriedLetters);
                 }
             }
 
