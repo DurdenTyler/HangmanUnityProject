@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace DefaultNamespace
@@ -18,6 +19,10 @@ namespace DefaultNamespace
         [SerializeField] private TextMeshProUGUI _cluesText;
 
         [SerializeField] private int hp = 7;
+
+        [SerializeField] private Sprite[] _hpSprites;
+        
+        [SerializeField] private Image _hpImage;
 
         private readonly List<char> _guessedLetters = new();
 
@@ -77,6 +82,9 @@ namespace DefaultNamespace
             {
                 _wrongTriedLetters.Add(pressedKey);
                 hp -= 1;
+                var currentHp = _hpSprites[hp];
+                _hpImage.sprite = currentHp;
+                
 
                 if (hp <= 0)
                 {
